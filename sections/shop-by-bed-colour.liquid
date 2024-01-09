@@ -1,0 +1,39 @@
+{% schema %}
+{
+  "name": "Shop By Colour",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Shop By Colour"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop By Colour"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Choose your preferred colour type"
+    },
+    {
+      "type": "collection",
+      "id": "collections",
+      "label": "Select collections"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign collections = section.settings.collections %}
+
+{% for collection in collections %}
+  <div class="collection">
+    <h2>{{ collection.title }}</h2>
+    <a href="{{ collection.url }}">
+      <img src="{{ collection.image | img_url: '480x480' }}" alt="{{ collection.title | escape }}">
+    </a>
+  </div>
+{% endfor %}
