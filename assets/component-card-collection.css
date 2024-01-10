@@ -1,0 +1,27 @@
+.card__content {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
+  width: 100%;
+  flex-grow: 1;
+  position: absolute;
+  inset: 0;
+}
+
+.card__information {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.card__heading {
+  padding: 1.5rem 2.5rem;
+  color: rgb(var(--color-background));
+  text-decoration: underline;
+  font-size: calc(var(--font-heading-scale) * 1.75rem);
+}
+
+@media screen and (max-width: 750px) {
+  .card__heading {
+    padding: 1rem 1.5rem;
+  }
+}
