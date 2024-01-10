@@ -338,6 +338,7 @@
 
 .image-with-text__content > * + * {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .image-with-text__content > .image-with-text__text:empty ~ a {
@@ -374,8 +375,7 @@
 
 @media screen and (max-width: 749px) {
   .collapse-padding .image-with-text__grid .image-with-text__content {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 1rem 0;
   }
 }
 
@@ -410,8 +410,26 @@
   row-gap: var(--grid-mobile-vertical-spacing);
 }
 
+.image-with-text__text-item {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 750px) {
   .multirow__inner {
     row-gap: var(--grid-desktop-vertical-spacing);
+  }
+
+  .image-with-text__text-item {
+    padding: 3rem;
+  }
+
+  .image-with-text__media-item.mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .image-with-text__media-item.desktop {
+    display: none;
   }
 }

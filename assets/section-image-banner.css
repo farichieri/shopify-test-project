@@ -16,10 +16,12 @@
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
     text-align: right;
+    margin-top: auto;
   }
 
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
+    margin-top: auto;
   }
 }
 
@@ -336,7 +338,8 @@
   }
 }
 
-.banner__box {
+.banner__box,
+.banner__box--mobile {
   padding: 4rem 3.5rem;
   position: relative;
   height: fit-content;
@@ -347,7 +350,21 @@
   z-index: 1;
 }
 
+.banner__box--mobile {
+  padding: 2rem 1rem;
+}
+
+.banner--button--mobile {
+  border: 1px solid black;
+  width: 100%;
+  font-weight: 600;
+}
+
 @media screen and (min-width: 750px) {
+  .banner__box--mobile {
+    display: none;
+  }
+
   .banner--desktop-transparent .banner__box {
     background: transparent;
     max-width: 89rem;
@@ -462,6 +479,7 @@
 
 .banner__box > * + .banner__buttons {
   margin-top: 2rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 749px) {

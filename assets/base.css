@@ -113,8 +113,8 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .utility-bar__grid.page-width {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -295,7 +295,7 @@ h5,
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: calc(var(--font-heading-scale) * 3.5rem);
 }
 
 @media only screen and (min-width: 750px) {
@@ -780,7 +780,7 @@ summary::-webkit-details-marker {
 /* component-title */
 .title,
 .title-wrapper-with-link {
-  margin: 3rem 0 2rem;
+  margin: 2rem 0 2rem;
 }
 
 .title-wrapper-with-link .title {
@@ -792,7 +792,7 @@ summary::-webkit-details-marker {
 }
 
 .title-wrapper {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .title-wrapper-with-link {
@@ -800,7 +800,7 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   align-items: flex-end;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
@@ -2282,7 +2282,13 @@ product-info .loading__spinner:not(.hidden) ~ *,
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 1);
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.help-icon:hover {
+  color: rgb(var(--color-foreground));
 }
 
 .announcement-bar__message {
@@ -2401,6 +2407,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .help-icon {
+    display: none;
   }
 }
 
