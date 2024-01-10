@@ -805,7 +805,7 @@ summary::-webkit-details-marker {
 }
 
 .title--primary {
-  margin: 4rem 0;
+  margin: 1rem 0;
 }
 
 .title-wrapper--self-padded-tablet-down,
@@ -2275,6 +2275,14 @@ product-info .loading__spinner:not(.hidden) ~ *,
   margin-left: 0.8rem;
   vertical-align: middle;
   margin-bottom: 0.2rem;
+}
+
+.help-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: rgba(var(--color-foreground), 1);
 }
 
 .announcement-bar__message {

@@ -51,6 +51,14 @@
           {%- endif -%}
         {%- endif -%}
       </div>
+
+    {%- if section.settings.enable_help_icon -%}
+      <a href="{{ section.settings.help_link }}" class="help-icon">
+        <span>HELP</span>
+        {%- render 'icon-help' -%}
+      </a>
+    {%- endif -%}
+
     {%- elsif section.blocks.size > 1 -%}
       <slideshow-component
         class="announcement-bar"
@@ -232,6 +240,18 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-4"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_help_icon",
+      "default": false,
+      "label": "Enable help icon"
+    },
+    {
+      "type": "url",
+      "id": "help_link",
+      "default": "",
+      "label": "Help link"
     },
     {
       "type": "checkbox",

@@ -3,8 +3,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -30,30 +30,32 @@
         endif
       -%}
       {%- paginate collections by paginate_by -%}
-        <ul
-          class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-          role="list"
-        >
-          
-          {% for collection in section.settings.collections %}
-            <li
-              class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-              {% render 'card-collection',
-                card_collection: collection,
-                media_aspect_ratio: section.settings.image_ratio,
-                withContent: false,
-                columns: 3
-          %}
-        </li>
-      {% endfor %}
-    </ul>
-    {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
+      <div class="slider">
+          <ul
+            class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+            role="list"
+          >
+            
+            {% for collection in section.settings.collections %}
+              <li
+                class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% render 'card-collection',
+                  card_collection: collection,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  withContent: false,
+                  columns: 3
+                %}
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+      {% render 'pagination', paginate: paginate %}
+      {%- endpaginate -%}
 </div>
 </div>
 </div>
