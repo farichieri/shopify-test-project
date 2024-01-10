@@ -38,7 +38,7 @@
         "image": "shopify:\/\/shop_images\/Mask_Group_1.svg",
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-left", 
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
@@ -52,13 +52,13 @@
       "type": "shop-by-bed-type",
       "settings": {
         "title": "Shop by bed type",
-        "subtitle": "Go on, find something fabulous.",
         "collections": [
           "ottoman-beds",
           "bed-frames",
           "sofa-beds",
           "ottoman-storage-benches"
         ],
+        "subtitle": "Go on, find something fabulous.",
         "image_ratio": "adapt",
         "columns_desktop": 2,
         "columns_mobile": "2",
@@ -70,13 +70,13 @@
       "type": "shop-by-colour",
       "settings": {
         "title": "Shop by colour",
-        "subtitle": "Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet.",
         "collections": [
           "ottoman-beds",
           "bed-frames",
           "sofa-beds",
           "ottoman-storage-benches"
         ],
+        "subtitle": "Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet.",
         "image_ratio": "adapt",
         "padding_top": 36,
         "padding_bottom": 36
