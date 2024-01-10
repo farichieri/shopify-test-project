@@ -9,7 +9,7 @@
           "type": "announcement",
           "settings": {
             "text": "SPEND & SAVE  |  UP TO £125 OFF  |  Click here for more details",
-            "link": ""
+            "link": "shopify:\/\/blogs\/news\/spend-save-up-to-125-off"
           }
         }
       },
@@ -18,14 +18,14 @@
       ],
       "settings": {
         "color_scheme": "",
+        "enable_help_icon": true,
+        "help_link": "shopify:\/\/blogs\/news",
         "show_line_separator": true,
         "show_social": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "enable_country_selector": false,
-        "enable_language_selector": false,
-        "enable_help_icon": true,
-        "help_link": ""
+        "enable_language_selector": false
       }
     },
     "header": {
@@ -40,7 +40,7 @@
         "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20
