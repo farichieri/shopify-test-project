@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Mask_Group_1.svg",
+        "image": "shopify:\/\/shop_images\/Mask_Group_1.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
@@ -48,44 +48,153 @@
         "show_text_below": false
       }
     },
-    "shop_by_bed_type": {
-      "type": "shop-by-bed-type",
+    "fb12df83-3e49-4312-99f1-2cb89693e829": {
+      "type": "collection-list",
+      "blocks": {
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ottoman-beds"
+          }
+        },
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bed-frames"
+          }
+        },
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sofa-beds"
+          }
+        },
+        "bd0004a7-2c1a-41a2-a548-da8266ac0fa1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ottoman-storage-benches"
+          }
+        }
+      },
+      "block_order": [
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-1",
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-2",
+        "template--22002152603962__fb12df83-3e49-4312-99f1-2cb89693e829-featured_collection-3",
+        "bd0004a7-2c1a-41a2-a548-da8266ac0fa1"
+      ],
       "settings": {
         "title": "Shop by bed type",
-        "collections": [
-          "ottoman-beds",
-          "bed-frames",
-          "sofa-beds",
-          "ottoman-storage-benches"
-        ],
         "subtitle": "Go on, find something fabulous.",
+        "heading_size": "h1",
         "image_ratio": "adapt",
         "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "shop-by-colour": {
-      "type": "shop-by-colour",
+    "a87d43e3-2279-4a16-abc3-b5201e17fb7f": {
+      "type": "collection-list",
+      "blocks": {
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "natural"
+          }
+        },
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "grey"
+          }
+        },
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "off-white"
+          }
+        },
+        "b4b145b0-1fcf-4e25-b2f1-d1d53f87709b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-1",
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-2",
+        "template--22002152603962__a87d43e3-2279-4a16-abc3-b5201e17fb7f-featured_collection-3",
+        "b4b145b0-1fcf-4e25-b2f1-d1d53f87709b"
+      ],
       "settings": {
         "title": "Shop by colour",
-        "collections": [
-          "ottoman-beds",
-          "bed-frames",
-          "sofa-beds",
-          "ottoman-storage-benches"
-        ],
         "subtitle": "Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet.",
+        "heading_size": "h1",
         "image_ratio": "adapt",
-        "padding_top": 36,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
+    },
+    "c397dc39-c6dd-4211-9844-74b5f9fc58d0": {
+      "type": "multirow",
+      "blocks": {
+        "template--22002152603962__c397dc39-c6dd-4211-9844-74b5f9fc58d0-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group172.png",
+            "caption": "",
+            "heading": "Shop the look",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer <\/p>",
+            "button_label": "ADD LOOK TO BASKET",
+            "button_link": "shopify:\/\/products\/otoman-bed-2"
+          }
+        },
+        "template--22002152603962__c397dc39-c6dd-4211-9844-74b5f9fc58d0-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group123.png",
+            "caption": "",
+            "heading": "Shop The Look",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer <\/p>",
+            "button_label": "ADD LOOK TO BASKET",
+            "button_link": "shopify:\/\/products\/ottoman-bed-1"
+          }
+        }
+      },
+      "block_order": [
+        "template--22002152603962__c397dc39-c6dd-4211-9844-74b5f9fc58d0-row-1",
+        "template--22002152603962__c397dc39-c6dd-4211-9844-74b5f9fc58d0-row-2"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "large",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 96,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
-    "shop_by_bed_type",
-    "shop-by-colour"
+    "fb12df83-3e49-4312-99f1-2cb89693e829",
+    "a87d43e3-2279-4a16-abc3-b5201e17fb7f",
+    "c397dc39-c6dd-4211-9844-74b5f9fc58d0"
   ]
 }

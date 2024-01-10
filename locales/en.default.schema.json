@@ -612,6 +612,9 @@
         "title": {
           "label": "Heading"
         },
+        "subtitle": {
+          "label": "Subheading"
+        },
         "image_ratio": {
           "label": "Image ratio",
           "options__1": {
