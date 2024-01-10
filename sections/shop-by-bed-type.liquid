@@ -1,40 +1,137 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ section.settings.title }}
+  </h1>
+  <p>{{ section.settings.subtitle }}</p>
+  {%- liquid
+    assign moduloResult = 28 | modulo: section.settings.columns_desktop
+    assign paginate_by = 30
+    if moduloResult == 0
+      assign paginate_by = 28
+    endif
+  -%}
+  {%- paginate collections by paginate_by -%}
+    <ul
+      class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+      role="list"
+    >
+      
+      {% for i in (1..4) %}
+        {% assign collection_id = 'collection' | append: i %}
+        {% assign collection = section.settings[collection_id] %}
+        
+        {% if collection.handle %}
+
+        <li
+          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {% render 'card-collection',
+            card_collection: collection,
+            media_aspect_ratio: section.settings.image_ratio,
+            withContent: false,
+            columns: 3
+          %}
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% render 'pagination', paginate: paginate %}
+  {%- endpaginate -%}
+</div>
 {% schema %}
 {
-  "name": "Shop By Bed Type",
+  "name": "t:sections.shop-by-bed-type.name",
+  "class": "section",
   "settings": [
     {
-      "type": "header",
-      "content": "Shop By Bed Type"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Shop By Bed Type"
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Choose your preferred bed type"
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:sections.shop-by-bed-type.settings.title.label",
+      "default": "Shop by bed type Title"
     },
     {
       "type": "collection",
-      "id": "collections",
-      "label": "Select collections"
+      "id": "collection1",
+      "label": "t:sections.shop-by-bed-type.settings.collection1.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection2",
+      "label": "t:sections.shop-by-bed-type.settings.collection2.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection3",
+      "label": "t:sections.shop-by-bed-type.settings.collection3.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection4",
+      "label": "t:sections.shop-by-bed-type.settings.collection4.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle",
+      "label": "t:sections.shop-by-bed-type.settings.subtitle.label",
+      "default": "Shop by bed type Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.shop-by-bed-type.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.shop-by-bed-type.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.shop-by-bed-type.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.shop-by-bed-type.settings.image_ratio.label",
+      "info": "t:sections.shop-by-bed-type.settings.image_ratio.info"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.shop-by-bed-type.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.shop-by-bed-type.settings.header_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "t:sections.shop-by-bed-type.settings.columns_mobile.options__1.label"
+        },
+        {
+          "value": "2",
+          "label": "t:sections.shop-by-bed-type.settings.columns_mobile.options__2.label"
+        }
+      ],
+      "default": "2",
+      "label": "t:sections.shop-by-bed-type.settings.columns_mobile.label"
     }
   ]
 }
 {% endschema %}
-
-{% assign collections = section.settings.collections %}
-
-{% for collection in collections %}
-  <div class="collection">
-    <h2>{{ collection.title }}</h2>
-    <a href="{{ collection.url }}">
-      <img src="{{ collection.image | img_url: '480x480' }}" alt="{{ collection.title | escape }}">
-    </a>
-    asd
-  </div>
-{% endfor %}
