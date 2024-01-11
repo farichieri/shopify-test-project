@@ -479,4 +479,5 @@
 
 .card__heading {
   margin: 0;
+  font-family: var(--font-body-scale);
 }

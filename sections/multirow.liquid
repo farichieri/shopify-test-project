@@ -2,7 +2,7 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
@@ -76,20 +76,21 @@
 
           <div class="image-with-text__text-item grid__item">
             <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
-              {%- if block.settings.caption -%}
-                <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
-                  {{ block.settings.caption | escape }}
-                </p>
-              {%- endif -%}
-              {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
-                  {{ block.settings.heading }}
-                </h2>
-              {%- endif -%}
-              {%- if block.settings.text -%}
-                <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
-              {%- endif -%}
-
+              <div class="image-with-text__content--text">
+                {%- if block.settings.caption -%}
+                  <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
+                    {{ block.settings.caption | escape }}
+                  </p>
+                {%- endif -%}
+                {%- if block.settings.heading -%}
+                  <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+                    {{ block.settings.heading }}
+                  </h2>
+                {%- endif -%}
+                {%- if block.settings.text -%}
+                  <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
+                {%- endif -%}
+              </div>
               <div class="image-with-text__media-item mobile image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
                 <div
                   class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
@@ -113,6 +114,7 @@
                 </div>
               </div>
 
+              <div class="image-with-text__content--text">
               {%- if block.settings.button_label != blank -%}
                 <a
                   {% if block.settings.button_link == blank %}
@@ -125,6 +127,7 @@
                   {{ block.settings.button_label | escape }}
                 </a>
               {%- endif -%}
+            </div>
             </div>
           </div>
         </div>

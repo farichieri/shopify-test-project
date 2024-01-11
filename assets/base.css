@@ -1238,7 +1238,7 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0 3rem;
+  padding: 0 2rem;
   cursor: pointer;
   font: inherit;
   font-size: 1.5rem;
@@ -2297,6 +2297,13 @@ product-info .loading__spinner:not(.hidden) ~ *,
   margin: 0;
   letter-spacing: 0.1rem;
   min-height: 3.8rem;
+  font-size: calc(var(--font-heading-scale) * 1.3rem);
+}
+
+@media screen and (max-width: 749px) {
+  .announcement-bar__message {
+    font-size: calc(var(--font-heading-scale) * 1.1rem);
+  }
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
