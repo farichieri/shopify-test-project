@@ -59,6 +59,13 @@
   }
 }
 
+.shop-by-bed__item .card--card,
+.shop-by-bed__item .card--standard .card__inner {
+  min-height: 230px;
+  border-radius: 15px;
+  overflow: auto;
+}
+
 @media screen and (max-width: 989px) {
   .shop-by-bed.slider .shop-by-bed__item {
     max-width: 100%;
