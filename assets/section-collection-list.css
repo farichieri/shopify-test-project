@@ -4,10 +4,14 @@
 }
 
 .collection-list-title {
-  margin: 0;
+  margin: 0 0 1.5rem 0;
 }
 
 @media screen and (max-width: 749px) {
+  .collection-list-title {
+    margin: 0;
+  }
+
   .collection-list:not(.slider) {
     padding-left: 0;
     padding-right: 0;

@@ -17,11 +17,14 @@
   padding: 1.5rem 2.5rem;
   color: rgb(var(--color-background));
   text-decoration: underline;
-  font-size: calc(var(--font-heading-scale) * 1.75rem);
+  font-size: calc(var(--font-heading-scale) * 2.3rem);
+  text-underline-offset: 0.125em;
+  text-decoration-thickness: 0.05em;
 }
 
 @media screen and (max-width: 750px) {
   .card__heading {
-    padding: 1rem 1.5rem;
+    padding: 0 1rem;
+    font-size: calc(var(--font-heading-scale) * 1.35rem);
   }
 }
